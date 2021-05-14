@@ -1,6 +1,4 @@
-package boargame.model;
-
-import boardgame.model.Position;
+package boardgame.model;
 
 import org.junit.Before;
 import org.junit.Test;

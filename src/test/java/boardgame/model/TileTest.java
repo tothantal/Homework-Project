@@ -1,11 +1,8 @@
-package boargame.model;
+package boardgame.model;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-
-import boardgame.model.Position;
-import boardgame.model.Tile;
 
 import org.junit.Before;
 import org.junit.Test;

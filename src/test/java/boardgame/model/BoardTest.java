@@ -1,12 +1,7 @@
-package boargame.model;
+package boardgame.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import boardgame.model.Board;
-import boardgame.model.Tile;
-import boardgame.model.Position;
-import boardgame.model.Direction;
 
 import org.junit.Before;
 import org.junit.Test;
