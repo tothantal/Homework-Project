@@ -116,20 +116,4 @@ public class GameController {
     public boolean moveTowards(Direction direction) {
         return game.moveTowards(direction);
     }
-
-
-    /**
-     * Temporary
-     */
-    public void drawBoard() {
-        view.drawBoardState(game.getBoard(), this.getCurrentPosition());
-    }
-
-
-    /**
-     * Temporary
-     */
-    public void drawHighscore() {
-        view.drawHighscore(game.getScore());
-    }
 }
