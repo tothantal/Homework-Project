@@ -35,8 +35,8 @@ public class Board {
         Logger.info("Creating a new board");
 
         Tile tiles;
-        firstRow = new ArrayList<Tile>();
-        secondRow = new ArrayList<Tile>();
+        firstRow = new ArrayList<>();
+        secondRow = new ArrayList<>();
 
         try {
             Logger.info("Creating the first row");
@@ -72,17 +72,17 @@ public class Board {
 
         Logger.info("Converting Board object to String");
 
-        String firstRowString = "( ";
+        StringBuilder firstRowString = new StringBuilder("( ");
         for(int i = 0; i < 10; i++) {
-            firstRowString = firstRowString + firstRow.get(i).toString() + " ";
+            firstRowString.append(firstRow.get(i).toString()).append(" ");
         }
-        firstRowString = firstRowString + ")";
+        firstRowString.append(")");
 
-        String secondRowString = "( ";
+        StringBuilder secondRowString = new StringBuilder("( ");
         for(int i = 0; i < 10; i++) {
-            secondRowString = secondRowString + secondRow.get(i).toString() + " ";
+            secondRowString.append(secondRow.get(i).toString()).append(" ");
         }
-        secondRowString = secondRowString + ")";
+        secondRowString.append(")");
 
         return "[" + firstRowString + secondRowString + "]";
     }
