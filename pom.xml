@@ -3,20 +3,28 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>hu.unideb.inf</groupId>
-    <artifactId>homework-template-project</artifactId>
+    <artifactId>Homework-Project</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <description></description>
+        
+    <description>
+        A simple logic game. Numbers are arranged from 2 to 9 in a row, and a 1 after. (See image in readme.md)
+	Each number can be moved into an empty position, and there are empty position above
+	the 4., 6. and 7. numbers.
+	The goal is to get the number 1 into the first position and everything else back into its
+	original position.
+    </description>
+        
     <developers>
         <developer>
-            <name></name>
-            <email></email>
+            <name>Tóth Antal</name>
+            <email>tothantal0326@gmail.com</email>
             <organization>Faculty of Informatics, University of Debrecen</organization>
             <organizationUrl>https://inf.unideb.hu/</organizationUrl>
         </developer>
     </developers>
     <scm>
-        <developerConnection>scm:git:https://github.com/INBPM0420/homework-template-project.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/tothantal/Homework-Project.git</developerConnection>
     </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
