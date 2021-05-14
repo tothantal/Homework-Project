@@ -92,7 +92,6 @@ public class HighscoreTest {
 
     }
 
-    // TODO:    Works with Eclipse
     @Test
     public void testToAndFromXml() throws JAXBException {
 
@@ -105,7 +104,6 @@ public class HighscoreTest {
         assertEquals(highscore.getScores().get(2).toString(), player3.toString());
     }
 
-    // TODO:    Works with Eclipse
     @Test
     public void testSaveScores() throws JAXBException {
 
