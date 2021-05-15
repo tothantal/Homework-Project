@@ -135,10 +135,26 @@ public class Tile {
      */
     public boolean isEmpty() {
         Logger.info("Checking whether Tile is empty");
-        if(this.value == 0) {
-            return true;
+        return this.value == 0;
+    }
+
+    /**
+     * Gets whether two {@code Tile}s are  upper, lower, right or left neighbours
+     *
+     * @param other The other {@code Tile}
+     * @return      The {code Direction} the other {@code Tile} is
+     */
+    public Direction getNeighbour(Tile other) {
+        if (this.getPosition().getUpperNeighbour() == other.getPosition()) {
+            return Direction.UP;
+        } else if (this.getPosition().getLowerNeighbour() == other.getPosition()) {
+            return Direction.DOWN;
+        } else if (this.getPosition().getRightNeighbour() == other.getPosition()) {
+            return Direction.RIGHT;
+        } else if (this.getPosition().getLeftNeighbour() == other.getPosition()) {
+            return Direction.LEFT;
         }
 
-        return false;
+        return Direction.NONE;
     }
 }
