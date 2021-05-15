@@ -176,6 +176,38 @@ public class Board {
     }
 
     /**
+     * Swaps the {@code Position} of two {@code Tile}s
+     *
+     * @param one   The {@code Tile} to be swapped
+     * @param other The {@code Tile} to be swapped with
+     */
+    public void move(Tile one, Tile other) {
+
+        Logger.info("Swapping tiles...");
+
+        if (one.getValue() == 0 || other.getValue() != 0) {
+            Logger.warn("Cannot move tiles");
+        } else {
+            switch(one.getNeighbour(other)) {
+                case Direction.UP:
+                    this.move(one.getPosition(), Direction.UP);
+                    break;
+                case Direction.DOWN:
+                    this.move(one.getPosition(), Direction.DOWN);
+                    break;
+                case: Direction.RIGHT:
+                    this.move(one.getPosition(), Direction.RIGHT);
+                    break;
+                case: Direction.LEFT:
+                    this.move(one.getPosition(), Direction.LEFT);
+                    break;
+                case: default:
+                    break;
+            }
+        }
+    }
+
+    /**
      * Moves the Tile at position to the given direction
      *
      * @param position	the position of the tile
