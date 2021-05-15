@@ -27,7 +27,7 @@ public class Tile {
 
 
     /**
-     * Returns the value part of {@code Tile} as a {@String}
+     * Returns the value part of {@code Tile} as a {@code String}
      */
     @Override
     public String toString() {
