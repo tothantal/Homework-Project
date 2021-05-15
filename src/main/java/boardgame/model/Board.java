@@ -189,19 +189,19 @@ public class Board {
             Logger.warn("Cannot move tiles");
         } else {
             switch(one.getNeighbour(other)) {
-                case Direction.UP:
+                case UP:
                     this.move(one.getPosition(), Direction.UP);
                     break;
-                case Direction.DOWN:
+                case DOWN:
                     this.move(one.getPosition(), Direction.DOWN);
                     break;
-                case: Direction.RIGHT:
+                case RIGHT:
                     this.move(one.getPosition(), Direction.RIGHT);
                     break;
-                case: Direction.LEFT:
+                case LEFT:
                     this.move(one.getPosition(), Direction.LEFT);
                     break;
-                case: default:
+                default:
                     break;
             }
         }
