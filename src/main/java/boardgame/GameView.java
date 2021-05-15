@@ -1,32 +1,24 @@
 package boardgame;
 
-import boardgame.model.Board;
-import boardgame.model.Highscore;
-import boardgame.model.Position;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  * The View part of the MVC architecture
- * TODO
  */
-public class GameView {
+public class GameView extends Application {
 
-    /**
-     * Temporary
-     *
-     * @param board
-     * @param currentPosition
-     */
-    public void drawBoardState(Board board, Position currentPosition) {
-        System.out.println(board.toString() + "\n\n"
-                + currentPosition.toString() + ": " + board.at(currentPosition));
-    }
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("board.fxml"));
 
-    /**
-     * Temporary
-     *
-     * @param highscore
-     */
-    public void drawHighscore(Highscore highscore) {
-        System.out.println(highscore.toString());
+        Scene scene = new Scene(root, 300, 275);
+
+        stage.setTitle("FXML");
+        stage.setScene(scene);
+        stage.show();
     }
 }
