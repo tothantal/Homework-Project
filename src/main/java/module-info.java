@@ -1,4 +1,4 @@
-module Homework.Project {
+module boardgame.model {
 
     requires java.xml.bind;
 
@@ -8,8 +8,4 @@ module Homework.Project {
     requires javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
-
-    requires java.activation;
-
-    opens main;
 }
