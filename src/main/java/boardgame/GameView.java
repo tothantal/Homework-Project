@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
@@ -11,11 +13,19 @@ import javafx.stage.Stage;
  */
 public class GameView extends Application {
 
+    private BorderPane layout;
+    private Scene scene;
+
+    public void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("board.fxml"));
+        layout = new BorderPane();
+        scene = new Scene(layout, 450, 80);
 
-        Scene scene = new Scene(root, 300, 275);
+        Button button = new Button("B");
 
         stage.setTitle("FXML");
         stage.setScene(scene);
