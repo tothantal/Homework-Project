@@ -13,15 +13,13 @@ public class GameControllerTest {
 
 
     Game game;
-    GameView view;
     GameController controller;
 
     @Before
     public void init() {
         game = new Game("default");
-        view = new GameView();
 
-        controller = new GameController(game, view);
+        controller = new GameController(game);
     }
 
     @Test
