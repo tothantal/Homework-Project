@@ -145,13 +145,13 @@ public class Tile {
      * @return      The {code Direction} the other {@code Tile} is
      */
     public Direction getNeighbour(Tile other) {
-        if (this.getPosition().getUpperNeighbour() == other.getPosition()) {
+        if (this.getPosition().getUpperNeighbour().equals(other.getPosition())) {
             return Direction.UP;
-        } else if (this.getPosition().getLowerNeighbour() == other.getPosition()) {
+        } else if (this.getPosition().getLowerNeighbour().equals(other.getPosition())) {
             return Direction.DOWN;
-        } else if (this.getPosition().getRightNeighbour() == other.getPosition()) {
+        } else if (this.getPosition().getRightNeighbour().equals(other.getPosition())) {
             return Direction.RIGHT;
-        } else if (this.getPosition().getLeftNeighbour() == other.getPosition()) {
+        } else if (this.getPosition().getLeftNeighbour().equals(other.getPosition())) {
             return Direction.LEFT;
         }
 

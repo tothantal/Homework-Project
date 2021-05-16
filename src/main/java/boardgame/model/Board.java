@@ -183,11 +183,8 @@ public class Board {
      */
     public void move(Tile one, Tile other) {
 
-        Logger.info("Swapping tiles...");
-
-        if (one.getValue() == 0 || other.getValue() != 0) {
-            Logger.warn("Cannot move tiles");
-        } else {
+        	Logger.info("Swapping tiles...");
+        	
             switch(one.getNeighbour(other)) {
                 case UP:
                     this.move(one.getPosition(), Direction.UP);
@@ -201,10 +198,11 @@ public class Board {
                 case LEFT:
                     this.move(one.getPosition(), Direction.LEFT);
                     break;
+                case NONE:
+                	break;
                 default:
                     break;
             }
-        }
     }
 
     /**
@@ -218,10 +216,6 @@ public class Board {
         Logger.info("Moving tile at " + position.toString());
 
         try {
-
-            if(this.at(position).toString().equals("0")) {
-                Logger.error("Cannot move empty tile");
-            } else {
 
                 switch(direction) {
                     case UP:
@@ -266,8 +260,11 @@ public class Board {
                             this.at(position.getLeftNeighbour()).setValue(this.at(position).getValue());
                             this.at(position).setValue(0);
                         }
+                    	break;
+                    	
+                    case NONE:
+                    	break;
                 }
-            }
         }
 
         catch (Exception e) {
