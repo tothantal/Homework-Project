@@ -1,11 +1,12 @@
 package hw.hw;
 
+import java.io.IOException;
+
+import javax.xml.bind.JAXBException;
+
 import boardgame.model.Highscore;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-
-import javax.xml.bind.JAXBException;
-import java.io.IOException;
 
 public class ScoreController {
 
