@@ -1,8 +1,11 @@
 package boardgame;
 
+import boardgame.model.Board;
 import boardgame.model.Direction;
 import boardgame.model.Game;
+import boardgame.model.Highscore;
 import boardgame.model.Position;
+import boardgame.model.Tile;
 
 import javax.xml.bind.JAXBException;
 
@@ -12,11 +15,11 @@ import javax.xml.bind.JAXBException;
 public class GameController {
 
     private final Game game;
-    private final GameView view;
-
-    public GameController(Game game, GameView view) {
+    private Highscore scores;
+    
+    public GameController(Game game) {
         this.game = game;
-        this.view = view;
+        this.setScores(new Highscore(game.getPlayer()));
     }
 
 
@@ -116,4 +119,33 @@ public class GameController {
     public boolean moveTowards(Direction direction) {
         return game.moveTowards(direction);
     }
+    
+    public Game getGame() {
+    	return this.game;
+    }
+    
+    public Board getGameBoard() {
+    	return this.getGame().getBoard();
+    }
+    
+    public void moveTiles(Tile one, Tile other) {
+    	
+    	if (one.getValue() == 0 && other.getValue() != 0) {
+    		Tile helper = one;
+    		one = other;
+    		other = helper;
+    	}
+    	
+    	this.getGameBoard().move(one, other);
+    }
+
+
+	public Highscore getScores() {
+		return scores;
+	}
+
+
+	public void setScores(Highscore scores) {
+		this.scores = scores;
+	}
 }
