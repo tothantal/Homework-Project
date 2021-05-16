@@ -1,7 +1,7 @@
 package boardgame.model;
 
 /**
- * Represents the four main directions
+ * Represents the four main directions, plus none
  */
 public enum Direction {
     UP,
